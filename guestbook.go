@@ -49,7 +49,6 @@ func createHandler(writer http.ResponseWriter, request *http.Request) {
 	err = file.Close()
 	check(err)
 	http.Redirect(writer, request, "/guestbook", http.StatusFound)
-	fmt.Println("hi")
 }
 
 func getStrings(fileName string) []string {
